@@ -100,10 +100,29 @@
                 ampm = "AM"; //set to AM
             }
 
-            //determine Timezone string
+            //convert GMT to standard time
+            if (utchr > 12) {
+                utchr -= 12;
+            } 
+            
+            //calculate time difference between GMT and local
+            timeDiff = hr - utchr
+            
+            //convert time difference
+            if (timeDiff < 0) {
+                adjTimeDiff = -timeDiff
+            }
 
-
-
+            //define time zone
+            if ((timeDiff == 5) || (adjTimeDiff == 5)) {
+                timeZone = "PT"
+            } else if ((timeDiff == 6) || (adjTimeDiff == 6)) {
+                timeZone = "MT"
+            } else if ((timeDiff == 7) || (adjTimeDiff == 7)) {
+                timeZone = "CT"
+            } else if ((timeDiff == 8) || (adjTimeDiff == 8)) {
+                timeZone = "ET"
+            }
 
             //assemble time format to display
             var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
@@ -113,8 +132,6 @@
             
             //run time data function every 1 second
             setInterval(currentTime, 1000); //setting timer
-            
-
         }
         //initial run of time data function
         currentTime();

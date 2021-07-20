@@ -254,12 +254,12 @@ select {
 }
 form .button input{
     display:block;
-    margin: 20px 0 10px 800px;
+    margin: 20px 0 10px 840px;
     width: 120px;
     height: 35px;
     font-weight: bold;
     color: #fff;
-    background-color: #4977D1;
+    /*background-color: #4977D1;*/
 }
 form .button input:hover {
     background-color: #9ed034;
@@ -276,4 +276,19 @@ form .button input:hover {
 }
 #timeofday span:first-child {
     color:#3a3a3a
+}
+.randomcode {
+    margin:  20px 0 10px 700px;
+}
+.randomcode input {
+    height: 30px;
+    margin-top: 20px;
+}
+.randomcode p {
+    float: right;
+    background-color: lightgrey;
+    width: fit-content;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 170px;
 }

@@ -34,7 +34,7 @@ function disableButton(btnvalue) {
 }
 
 //listen to user input code
-var codebox = document.getElementByID("codeentered"); //get textbox
+var codebox = document.getElementById("codeentered"); //get textbox
 codebox.addEventListener("input", evaluateCode); //listen to code entered in textbox
 
 //run function if detected user had entered a character in textbox

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Embed Style Method-->
 </head>
-<body id="contact">
+<body id="contact" onLoad="disableButton(true)">
     <div class="container">
         <header>
             <div class="main-header">
@@ -79,19 +79,17 @@
 
                 <!--Random codes-->
                 <div class="randomcode">
-                    <input type="text" name="randomcode" placeholder="Enter characters">
+                    <input id="codeentered" type="text" name="randomcode" placeholder="Enter characters">
                     <p id="codes"></p>
                 </div>
 
-                <div class="button">
-                    <input type="submit" value="Inquire">
-                </div> 
+                <button id="submit" disabled>Inquire</button>
             </fieldset>  
             </form>
         </main>
         <section>
             <ul id="partners">
-                <li class="partner">
+                <!--<li class="partner">
                     <img src="partners/partner-bustour.png" alt="Partner Bus Tours"> </li>
                 <li class="partner">
                     <img src="partners/partner-cabinrental.png" alt="Partner Cabin Rental"> </li>
@@ -102,7 +100,7 @@
                 <li class="partner">
                     <img src="partners/partner-rentalbike.png" alt="Partner Bike Rentals"> </li>
                 <li class="partner">
-                    <img src="partners/partner-tourgroup.png" alt="Partner Tour Group"> </li>
+                    <img src="partners/partner-tourgroup.png" alt="Partner Tour Group"> </li>-->
             </ul>
         </section>
         <footer>

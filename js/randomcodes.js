@@ -1,13 +1,12 @@
 /* ---- random codes ---- */
 //function to generate combination of characters
+var code = ' ';
 function generateCode() {
     //create variables to store generated codes and the type of characters we want to show as codes
-    var code = ' '; //initialize to null value
     var getCode = ' '; //to store entered code
     var btnvalue; //for button boolean value
     //create variable to hold the type of characters we want to show as codes
     var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
-
     //generate character multiple times using a loop
     for (i = 1; i <=8; i++) {
         var char = Math.random()* str.length; //random select a character from the variable and then store in a new variable
@@ -40,7 +39,7 @@ codebox.addEventListener("input", evaluateCode); //listen to code entered in tex
 //run function if detected user had entered a character in textbox
 function evaluateCode() {
     getCode = document.getElementById("codeentered").value; //get character entered
-    var charset1 = getCode.trim(); //remove any hidden characters entered
+    var charset1 = getCode.trim(); //remove any hidden characters entere
     var charset2 = code.trim(); //remove any hidden characters generated
     //test if code entered matches the number of genereated characters
     if (charset1.length == charset2.length && charset1 == charset2) {
